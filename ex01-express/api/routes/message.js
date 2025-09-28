@@ -63,7 +63,7 @@ router.delete("/:messageId", async (req, res) => {
     }
 
     await message.destroy();
-    return res.send(message);
+    return res.status(204).send();
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }

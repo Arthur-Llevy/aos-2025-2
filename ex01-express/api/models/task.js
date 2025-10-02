@@ -19,16 +19,7 @@ const getTaskModel = (sequelize, { DataTypes }) => {
       defaultValue: false,
     },
 
-    userId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-
   });
-
-  Task.associate = (models) => {
-    Task.belongsTo(models.User, { foreignKey: "userId" });
-  };
 
   return Task;
 };

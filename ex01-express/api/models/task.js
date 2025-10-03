@@ -9,9 +9,7 @@ const getTaskModel = (sequelize, { DataTypes }) => {
     descricao: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        notEmpty: true,
-      },
+     
     },
 
     concluida: {
